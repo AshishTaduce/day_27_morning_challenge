@@ -31,6 +31,7 @@ avgWeight(int noOfCalls) async {
       }
     });
   }
+  await executor.join(withWaiting: true);
   return playerWeights.reduce((a, b)=> a + b)/playerWeights.length;
 }
 
